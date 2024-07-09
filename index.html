@@ -83,6 +83,78 @@ body{
     left: 5rem;
 }
 
+.navbar a {
+  width: 100px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 8px;
+  text-align: center;
+  /* margin: 0 5px; */
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.navbar a:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  border-left: 3px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.navbar a:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.navbar a:hover {
+  box-shadow: 0 5px 15px rgb(255, 250, 250);
+}
+
+.navbar a:hover:before {
+  border-color: #ffffff;
+  height: 100%;
+  transform: translateX(0);
+  transition: .21s transform linear, .21s height linear .21s;
+}
+
+.navbar a:hover:after {
+  border-color: #020202;
+  height: 100%;
+  transform: translateX(0);
+  transition: .31s transform linear, .31s height linear .51s;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  /* border-radius: 10px ; */
+  background: transparent;
+  /* background-color: rgb(26, 24, 24); */
+ 
+  
+}
 
 
 
